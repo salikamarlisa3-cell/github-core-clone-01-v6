@@ -1,0 +1,16 @@
+[package]
+name = "forge"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+description = "A GitHub-core clone (git smart-HTTP, REST, GraphQL, MCP) in one std-only Rust binary"
+
+[[bin]]
+name = "forge"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
